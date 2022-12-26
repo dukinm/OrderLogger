@@ -1,0 +1,8 @@
+{
+  "port": 8081,
+  "show_log_in_console": true,
+  "write_log_to_folder": true,
+  "log_folder_path": "log",
+  "create_log_folder_if_not_exits": true,
+  "api_path": "/v1/user/iiko/order"
+}
