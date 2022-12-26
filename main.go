@@ -17,6 +17,7 @@ type Config struct {
 	LogFolderPath             string `json:"log_folder_path"`
 	CreateLogFolderIfNotExits bool   `json:"create_log_folder_if_not_exits"`
 	APIPath                   string `json:"api_path"`
+	PWD                       string
 }
 
 func GetConfig() (config Config) {
@@ -34,6 +35,8 @@ func GetConfig() (config Config) {
 	file, _ := os.ReadFile(configFile)
 
 	err = json.Unmarshal([]byte(file), &config)
+
+	config.PWD = pwd
 
 	if err != nil {
 		fmt.Println(err)
